@@ -4,7 +4,7 @@ from collections import defaultdict
 import re
 from math import log
 
-words = nltk.word_tokenize(open("corpus1.txt").read().lower())
+words = nltk.word_tokenize(open("corpus2.txt").read().lower())
 vwords = defaultdict(int)
 
 punctuation = [',', '.', '?', '!', ':', ';', '\'', '\"','@', '=', '&' ]
@@ -16,9 +16,9 @@ for word in words:
 		vwords[word] += 1
 		count += 1
 maxl=len(max(vwords,key=len))
-highest=max(vwords,key=len)
+#highest=max(vwords,key=len)
 print highest
-csvfile="unigram1.csv"
+csvfile="unigram2.csv"
 with open(csvfile,"w") as output:
     writer = csv.writer(output,lineterminator="\n")
     for key,value in vwords.iteritems():
