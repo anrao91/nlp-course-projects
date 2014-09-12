@@ -17,7 +17,7 @@ for word in words:
 		count += 1
 maxl=len(max(vwords,key=len))
 #highest=max(vwords,key=len)
-print highest
+#print highest
 csvfile="unigram2.csv"
 with open(csvfile,"w") as output:
     writer = csv.writer(output,lineterminator="\n")
